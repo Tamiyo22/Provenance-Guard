@@ -42,62 +42,53 @@ Two things worth knowing before you pick numbers:
   a **miss**.
 
 ---
-## 1.
+## 1. Minimize false positives
 
-<!-- Your criterion. It must name a number. -->
-
-
+Across a test set of 20 independently verified human-written samples, no more than 1 sample (5%) should receive a high-confidence AI-generated label. This target must hold independently across all three evaluation trials.
 
 **Why this target:**
 
-
+False positives are especially harmful because incorrectly accusing a genuine writer of using AI can damage their reputation and trust in the platform. I chose a conservative 5% maximum for the evaluation sample because protecting human writers is more important than detecting every AI-generated submission.
 
 ---
 
-## 2.
+## 2. Meaningful score separation
 
-<!-- Your criterion. -->
-
-
+Using 20 verified human-written samples and 20 known AI-generated samples, the average AI-likelihood score for AI-generated writing should be at least 0.20 higher than the average score for human-written writing. This difference must hold across all three trials.
 
 **Why this target:**
 
-
+The system should distinguish between human and AI writing rather than producing similar scores for every submission. A minimum average difference of 0.20 provides a measurable separation target without assuming perfect detection.
 
 ---
 
-## 3.
+## 3. Complete label coverage
 
-<!-- Your criterion. -->
-
-
+All three classification labels—high-confidence AI, high-confidence human, and unsure—must be reachable. Every valid score between 0.0 and 1.0, including boundary values, must map to exactly one label, with no gaps or overlaps.
 
 **Why this target:**
 
-
+Uncertainty is an essential part of responsible AI detection. Every possible score needs an appropriate interpretation so the system does not make unsupported accusations or fail to classify borderline submissions.
 
 ---
 
-## 4.
+## 4. Reliable appeal processing
 
-<!-- Your criterion. -->
-
-
+In a test of 20 valid appeals referencing existing submissions, 100% must change the submission status to `under_review`, create an audit-log record containing the appeal reasoning, and return confirmation. This must hold across all three trials.
 
 **Why this target:**
 
-
+Writers need a dependable way to challenge potentially incorrect classifications. Because an appeal is a fundamental safeguard against false accusations, valid appeals should never be silently ignored or lost.
 
 ---
 
-## 5.
+## 5. Safe handling of invalid input
 
-<!-- Your criterion. -->
-
-
+In a test containing 20 invalid submissions, including missing text, empty strings, whitespace-only text, and missing creator IDs, 100% must return HTTP 400 without creating a submission record. This must hold across all three trials.
 
 **Why this target:**
 
+Invalid submissions should be rejected before any detection or scoring occurs. Consistent input validation prevents misleading classifications, unnecessary processing, and incomplete records from entering the system.
 
 
 ---
