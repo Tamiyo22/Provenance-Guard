@@ -24,7 +24,8 @@ PORT = int(os.getenv("PORT", "5000"))
 # Flask's debug mode gives anyone who can reach the service an interactive
 # Python prompt inside your process. Fine on loopback, a gift to strangers
 # anywhere else — so it turns itself off the moment HOST isn't loopback.
-DEBUG = os.getenv("AI201_DEBUG", "1") == "1" and HOST in ("127.0.0.1", "localhost")
+DEBUG = os.getenv("AI201_DEBUG", "1") == "1" and HOST in (
+    "127.0.0.1", "localhost")
 
 
 # ─── The local model ─────────────────────────────────────────────────────────
@@ -54,8 +55,8 @@ DETECTOR_MAX_TOKENS = 400
 # down BEFORE you code it, and to put the numbers in your README. Whatever you
 # decide, it goes here.
 
-WEIGHT_MODEL_SIGNAL = 0.5
-WEIGHT_STYLE_SIGNAL = 0.5
+WEIGHT_MODEL_SIGNAL = 0.6
+WEIGHT_STYLE_SIGNAL = 0.4
 
 
 # ─── Thresholds (Milestone 5) ────────────────────────────────────────────────

@@ -32,6 +32,8 @@ from flask import Flask, jsonify, request
 import audit
 import config
 import detector
+import scoring
+import stylometry
 
 app = Flask(__name__)
 
@@ -205,19 +207,28 @@ def submit():
 
     # Milestone 3: Get the AI detection score.
     # This must run AFTER validation, not inside an error condition.
-      # Milestone 3: Get the AI detection score.
-    # This must run AFTER validation, not inside an error condition.
     model_score = detector.model_signal(text)
+
+    # Milestone 4: Get the stylometry score.
+    style_score = stylometry.style_signal(text)
+
+    # Milestone 4: Combine both signals into one score.
+    combined_score = scoring.combine_signals(model_score, style_score)
 
     # Milestone 3: Generate a unique ID for this submission.
     content_id = str(uuid.uuid4())
 
-    # Temporary response until both signals and final labels are connected.
-    # The model_score is real; the other scores and labels are placeholders.
-    guess = "unsure"
-    confidence = 0.50
-    label = "We cannot reliably determine how this text was created."
-    style_score = 0.50
+    # Milestone 5: Convert the combined score into a reader-friendly label.
+    guess, label = scoring.score_to_label(combined_score)
+
+    # Report the strength of the heuristic score in the chosen direction.
+    # This is not a calibrated probability of authorship.
+    if guess == "ai":
+        confidence = round(combined_score, 4)
+    elif guess == "human":
+        confidence = round(1.0 - combined_score, 4)
+    else:
+        confidence = 0.50
 
     # Milestone 3: Record the decision in the audit log.
     # Keep the same content_id in the log and API response.
@@ -227,7 +238,7 @@ def submit():
         guess=guess,
         model_score=model_score,
         style_score=style_score,
-        combined_score=None,
+        combined_score=combined_score,
         label=label,
         status="decided",
     )
@@ -240,6 +251,7 @@ def submit():
         "label": label,
         "model_score": model_score,
         "style_score": style_score,
+        "combined_score": combined_score,
     }), 200
 
 
@@ -263,14 +275,66 @@ def appeal():
     to the person on the other end. It's the only thing standing between a
     wrong accusation and nothing at all.
     """
-    payload = request.get_json(silent=True) or {}
 
-    # TODO: delete this and build the route.
+    # Milestone 5: Read and validate the appeal request.
+    payload = request.get_json(silent=True)
+
+    if not isinstance(payload, dict):
+        return jsonify({
+            "error": "invalid_request",
+            "message": "A JSON object is required."
+        }), 400
+
+    content_id = payload.get("content_id")
+    reasoning = payload.get("reasoning")
+
+    # An appeal must identify an existing submission.
+    if not isinstance(content_id, str) or not content_id.strip():
+        return jsonify({
+            "error": "invalid_content_id",
+            "message": "A valid content_id is required."
+        }), 400
+
+    # Require the writer to explain why they are appealing.
+    if not isinstance(reasoning, str) or not reasoning.strip():
+        return jsonify({
+            "error": "invalid_reasoning",
+            "message": "Please provide a reason for your appeal."
+        }), 400
+
+    # Find the original submission in the audit log.
+    entries = audit.entries_for(content_id)
+
+    original = next(
+        (entry for entry in entries if entry.get("status") == "decided"),
+        None
+    )
+
+    if original is None:
+        return jsonify({
+            "error": "not_found",
+            "message": "No submission was found with that content_id."
+        }), 404
+
+    # Prevent duplicate appeals for the same submission.
+    if any(entry.get("event") == "appeal" for entry in entries):
+        return jsonify({
+            "error": "already_appealed",
+            "message": "An appeal has already been submitted for this content."
+        }), 409
+
+    # Record the appeal without overwriting the original decision.
+    audit.log_appeal(
+        content_id=content_id,
+        creator_id=original["creator_id"],
+        reasoning=reasoning
+    )
+
     return jsonify({
-        "error": "not_implemented",
-        "message": "POST /appeal isn't built yet — see the TODO in app.py.",
-        "you_sent": payload,
-    }), 501
+        "content_id": content_id,
+        "status": "under_review",
+        "message": "Your appeal has been received and is awaiting review."
+    }), 200
 
 
 # ── Already works ─────────────────────────────────────────────────────────────
