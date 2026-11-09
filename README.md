@@ -248,28 +248,31 @@ Because the log is append-only, the original decision remains available for audi
 
 ## Rate Limiting
 
-**My limits:** **_ per minute, _** per day
+## Rate Limiting
+
+**My limits:** 10 per minute, 200 per day
 
 **Why those numbers and not others:**
 
-<!-- Think about two people: a real writer submitting their own work a few
-     times an hour, and a script sending a thousand variations to map your
-     thresholds. Your numbers have to be liveable for the first and hostile to
-     the second. -->
+I chose 10 requests per minute because a legitimate writer might submit several drafts or revisions in a short period, but probably wouldn't need more than 10 submissions in one minute. The daily limit of 200 allows regular use while making it harder for automated scripts to repeatedly test variations and map the detector's thresholds.
 
-**What a caller counts as:** <!-- per address, or per creator_id? They fail
-differently — one script can look like a thousand callers, and one household
-can look like one. -->
+**What a caller counts as:**
+
+My service primarily identifies callers by `creator_id`. If a request contains a valid, nonempty `creator_id`, the rate limiter tracks submissions under that ID. If the ID is missing, empty, or the request body isn't a JSON object, it falls back to the caller's IP address.
+
+This prevents multiple submissions using the same creator ID from bypassing the limit simply by coming from different IP addresses. However, someone could still evade the limit by repeatedly changing their `creator_id`, since the service doesn't verify those identities.
 
 **The run of status codes when I pushed past it:**
 
-<!-- python run_attacks.py --flood 15 -->
+Command: `python run_attacks.py --flood 15`
 
+```text
+200 200 200 200 200 200 200 200 200 200 429 429 429 429 429
 ```
 
-```
+The first 10 submissions succeeded, and the remaining 5 were rejected with HTTP 429. This confirmed that the per-minute limit was enforced.
 
----
+## Results saved to `results/flood_2026-11-09_1740.md`.
 
 ## Attack Run — Before
 
