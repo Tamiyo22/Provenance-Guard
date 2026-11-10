@@ -183,6 +183,13 @@ def submit():
 
     # Make sure the request contains a JSON object.
     if not isinstance(payload, dict):
+        # Log malformed requests before rejecting them.
+        audit.log_rejection(
+            creator_id="unknown",
+            reason="invalid_request",
+            http_status=400
+        )
+
         return jsonify({
             "error": "invalid_request",
             "message": "A JSON object is required."
@@ -192,7 +199,16 @@ def submit():
     creator_id = payload.get("creator_id")
 
     # Reject missing or empty text.
+    # Reject missing or empty text.
     if not isinstance(text, str) or not text.strip():
+        # Record invalid text submissions in the audit log.
+        audit.log_rejection(
+            creator_id=creator_id if isinstance(
+                creator_id, str) and creator_id.strip() else "unknown",
+            reason="invalid_text",
+            http_status=400
+        )
+
         return jsonify({
             "error": "invalid_text",
             "message": "Text must be a non-empty string."
@@ -200,6 +216,13 @@ def submit():
 
     # Reject missing or empty creator IDs.
     if not isinstance(creator_id, str) or not creator_id.strip():
+        # Record invalid creator IDs in the audit log.
+        audit.log_rejection(
+            creator_id="unknown",
+            reason="invalid_creator",
+            http_status=400
+        )
+
         return jsonify({
             "error": "invalid_creator",
             "message": "A valid creator_id is required."
