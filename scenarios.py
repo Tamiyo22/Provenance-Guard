@@ -22,29 +22,42 @@ A scenario carries **either** of these:
               because you cannot express "the field is missing" as a string.
 """
 
+from pathlib import Path
+
+
+def load_samples(category: str, prefix: str) -> list[str]:
+    """Load the 20 evaluation samples from their text files."""
+    folder = Path(__file__).resolve().parent / "evaluation_data" / category
+
+    return [
+        (folder / f"{prefix}_{i:03d}.txt").read_text(
+            encoding="utf-8-sig"
+        ).strip()
+        for i in range(1, 21)
+    ]
+
+
 SCENARIOS = [
     {
         "name": "my own writing",
         "criterion": 1,
-        # ⚠️ PUT YOUR OWN WRITING HERE. Not AI text, not a sample from the web —
-        # things you actually wrote. This is the criterion that matters most and
-        # it's meaningless with someone else's prose.
-        "texts": [
-            "REPLACE ME with a paragraph you wrote yourself.",
-            "REPLACE ME with another one. Ten pieces is the usual number.",
-        ],
+
+        "texts": load_samples("human", "human"),
+
     },
+
     {
-        "name": "label coverage",
+        "name": "AI versus human score separation",
         "criterion": 2,
-        # Inputs spread across your score range, so you can check all three
-        # labels are actually reachable.
-        "texts": [
-            "REPLACE ME with something you're confident is AI-generated.",
-            "REPLACE ME with something you're confident is human-written.",
-            "REPLACE ME with something genuinely borderline.",
-        ],
+        # Compare 20 verified human samples against 20 AI-generated samples.
+        # The average AI-likelihood score for AI writing must be at least
+        # 0.20 higher than the average for human writing.
+        "texts": (
+            load_samples("human", "human")
+            + load_samples("ai", "ai")
+        ),
     },
+
     # A bad-input criterion looks like this. Uncomment and adjust if that's one
     # of your five — these are raw request bodies, sent exactly as written.
     #

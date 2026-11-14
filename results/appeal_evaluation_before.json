@@ -1,0 +1,443 @@
+[
+  {
+    "trial": 1,
+    "passed": 20,
+    "total": 20,
+    "results": [
+      {
+        "sample": 1,
+        "content_id": "fb6200cc-6d78-4ff0-957e-220fac44eb4c",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 2,
+        "content_id": "bdef78f8-d4bb-4e0d-9211-6e8da0764062",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 3,
+        "content_id": "1d81e475-a4b5-46f4-bbd1-f7004f99d250",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 4,
+        "content_id": "5f0c8904-4023-4572-b3b4-6befdad0cbb5",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 5,
+        "content_id": "bc3614d7-aaaf-43f0-932b-bf1469a844b7",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 6,
+        "content_id": "3db8a86a-79ef-4f97-afc8-c67c333658de",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 7,
+        "content_id": "0272ecb1-3f90-4cd4-89f2-d472ba31e847",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 8,
+        "content_id": "ebb54f14-2f9c-4a53-b897-67db34a81898",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 9,
+        "content_id": "9ab51119-1799-49a0-97e8-b0542b6befb5",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 10,
+        "content_id": "8395b816-ccd0-471f-8bd0-d2673e434e16",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 11,
+        "content_id": "1c86220c-81a8-46d5-8a2f-38f7b6392478",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 12,
+        "content_id": "f8991439-2965-4ca9-a3c3-dbe3a984d0da",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 13,
+        "content_id": "c5a04c95-0f69-4c0a-af0f-0044388a5218",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 14,
+        "content_id": "b4c754ae-726c-43d9-b58f-35372cfc9eff",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 15,
+        "content_id": "f3611a0a-bcc0-45b7-9efc-b810bafefa95",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 16,
+        "content_id": "6aa1da8d-be7b-4c18-8c87-2c0265ba3884",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 17,
+        "content_id": "1731c9ae-e4b3-476c-8be3-66ebeeb64f4a",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 18,
+        "content_id": "032f7968-b261-4ab1-a472-d151a0f43cbf",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 19,
+        "content_id": "8fb0be0c-cb14-4ff8-901e-47fa7ea1343a",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 20,
+        "content_id": "cb6bda22-87d2-48e3-b031-ff41b319885c",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "trial": 2,
+    "passed": 20,
+    "total": 20,
+    "results": [
+      {
+        "sample": 1,
+        "content_id": "4ed92296-8459-4b37-9df4-cb35e8a8e00d",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 2,
+        "content_id": "34dfe1e7-432c-40f6-8b1e-e8aaf35bdc77",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 3,
+        "content_id": "6afbf96e-7817-465c-9eb0-63e465db5f62",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 4,
+        "content_id": "f7dd54c3-f2c3-498b-870c-45c52476bc1b",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 5,
+        "content_id": "706b337a-5fa8-4e53-a239-cb9ea5ef561b",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 6,
+        "content_id": "07d1e83c-ba72-4442-9606-af9ea438220c",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 7,
+        "content_id": "ea8a55d4-61af-4405-85cd-835819bdeed9",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 8,
+        "content_id": "f152fb8e-fce7-4fc4-ab70-651fc945fa00",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 9,
+        "content_id": "5b95e114-b32b-42d8-8910-aca27bdb26d1",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 10,
+        "content_id": "90cdb6dd-f039-4cba-a3c4-c53945c49097",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 11,
+        "content_id": "7610166c-f258-4831-95c5-2a1655f14c2f",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 12,
+        "content_id": "3ef1a289-92e2-490c-84fc-46eda892f8e9",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 13,
+        "content_id": "08016901-af5d-4b34-a4e5-752363131fbb",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 14,
+        "content_id": "1553c686-67cb-466f-be83-8d4269669a2c",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 15,
+        "content_id": "73e99363-6b53-46b4-ac9f-c77fdebbc4c1",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 16,
+        "content_id": "11dd17ad-c502-4e5f-a486-6451f19b25bd",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 17,
+        "content_id": "6dde907b-5c26-4f60-b20a-dbe3bd670082",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 18,
+        "content_id": "38bc2e27-53df-43e9-a6e7-9c907f53c28b",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 19,
+        "content_id": "ef6257ed-baf3-4cda-9486-2d1506a34f8d",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 20,
+        "content_id": "e429d7f4-da82-423e-baa3-32a87f9c7f81",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "trial": 3,
+    "passed": 20,
+    "total": 20,
+    "results": [
+      {
+        "sample": 1,
+        "content_id": "0746a106-e5ee-49c5-839f-b2b5f2bd7ca9",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 2,
+        "content_id": "6b97c4b4-4211-4eb6-acff-5880575c52e4",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 3,
+        "content_id": "d04bd90b-d780-4e7e-8fbf-ee087d5799b1",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 4,
+        "content_id": "aeb01b57-aada-4908-a76c-054d580a228a",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 5,
+        "content_id": "a762413b-6eb3-4351-aed8-fa74e713312c",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 6,
+        "content_id": "e6f66337-8ae7-43c7-a6e4-4e9eadfcb5df",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 7,
+        "content_id": "e2959ed2-ba21-443f-b982-f361f365fa28",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 8,
+        "content_id": "0b4cb313-008a-4541-b014-c9df4e38a71f",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 9,
+        "content_id": "9468faa5-abc1-45b2-8f7e-26c3c0f1db94",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 10,
+        "content_id": "e2732248-b473-40be-b84f-bb15d879b731",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 11,
+        "content_id": "992f5298-2a03-4f24-80ae-3b37726a7481",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 12,
+        "content_id": "a411acc5-154d-41a3-b8b8-bc95d1fdb310",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 13,
+        "content_id": "55ee85f7-b215-41f5-b1e6-ed842c81e1c1",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 14,
+        "content_id": "90e69dbb-9159-4bac-904c-8ee5f1f90f10",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 15,
+        "content_id": "b08b88e0-705f-493b-83f4-4692e25050e6",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 16,
+        "content_id": "d08d722b-c639-4bd4-8925-f620fce860e9",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 17,
+        "content_id": "ae6a0381-52cd-4f97-a20a-2fb497b77ebe",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 18,
+        "content_id": "941fe302-148a-4f83-b2d3-0bd0428a2155",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 19,
+        "content_id": "ea597a22-96bd-4efa-b8e2-8c46958ada2e",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      },
+      {
+        "sample": 20,
+        "content_id": "6e435e4d-0c46-472e-8bff-e17cd298574f",
+        "response_ok": true,
+        "audit_ok": true,
+        "passed": true
+      }
+    ]
+  }
+]

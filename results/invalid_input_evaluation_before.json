@@ -1,0 +1,812 @@
+[
+  {
+    "trial": 1,
+    "passed": 20,
+    "total": 20,
+    "results": [
+      {
+        "sample": 1,
+        "payload": {
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 2,
+        "payload": {
+          "text": "",
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 3,
+        "payload": {
+          "text": "   ",
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 4,
+        "payload": {
+          "text": "\n\t",
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 5,
+        "payload": {
+          "text": null,
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 6,
+        "payload": {
+          "text": 123,
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 7,
+        "payload": {
+          "text": [],
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 8,
+        "payload": {
+          "text": {},
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 9,
+        "payload": {
+          "text": "Valid writing sample."
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 10,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": ""
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 11,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": "   "
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 12,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": null
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 13,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": 123
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 14,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": []
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 15,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": {}
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 16,
+        "payload": {},
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 17,
+        "payload": [],
+        "status_code": 400,
+        "response": {
+          "error": "invalid_request",
+          "message": "A JSON object is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 18,
+        "payload": null,
+        "status_code": 400,
+        "response": {
+          "error": "invalid_request",
+          "message": "A JSON object is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 19,
+        "payload": "not a JSON object",
+        "status_code": 400,
+        "response": {
+          "error": "invalid_request",
+          "message": "A JSON object is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 20,
+        "payload": 123,
+        "status_code": 400,
+        "response": {
+          "error": "invalid_request",
+          "message": "A JSON object is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "trial": 2,
+    "passed": 20,
+    "total": 20,
+    "results": [
+      {
+        "sample": 1,
+        "payload": {
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 2,
+        "payload": {
+          "text": "",
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 3,
+        "payload": {
+          "text": "   ",
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 4,
+        "payload": {
+          "text": "\n\t",
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 5,
+        "payload": {
+          "text": null,
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 6,
+        "payload": {
+          "text": 123,
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 7,
+        "payload": {
+          "text": [],
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 8,
+        "payload": {
+          "text": {},
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 9,
+        "payload": {
+          "text": "Valid writing sample."
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 10,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": ""
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 11,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": "   "
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 12,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": null
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 13,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": 123
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 14,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": []
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 15,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": {}
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 16,
+        "payload": {},
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 17,
+        "payload": [],
+        "status_code": 400,
+        "response": {
+          "error": "invalid_request",
+          "message": "A JSON object is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 18,
+        "payload": null,
+        "status_code": 400,
+        "response": {
+          "error": "invalid_request",
+          "message": "A JSON object is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 19,
+        "payload": "not a JSON object",
+        "status_code": 400,
+        "response": {
+          "error": "invalid_request",
+          "message": "A JSON object is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 20,
+        "payload": 123,
+        "status_code": 400,
+        "response": {
+          "error": "invalid_request",
+          "message": "A JSON object is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "trial": 3,
+    "passed": 20,
+    "total": 20,
+    "results": [
+      {
+        "sample": 1,
+        "payload": {
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 2,
+        "payload": {
+          "text": "",
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 3,
+        "payload": {
+          "text": "   ",
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 4,
+        "payload": {
+          "text": "\n\t",
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 5,
+        "payload": {
+          "text": null,
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 6,
+        "payload": {
+          "text": 123,
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 7,
+        "payload": {
+          "text": [],
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 8,
+        "payload": {
+          "text": {},
+          "creator_id": "test_user"
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 9,
+        "payload": {
+          "text": "Valid writing sample."
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 10,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": ""
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 11,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": "   "
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 12,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": null
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 13,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": 123
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 14,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": []
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 15,
+        "payload": {
+          "text": "Valid writing sample.",
+          "creator_id": {}
+        },
+        "status_code": 400,
+        "response": {
+          "error": "invalid_creator",
+          "message": "A valid creator_id is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 16,
+        "payload": {},
+        "status_code": 400,
+        "response": {
+          "error": "invalid_text",
+          "message": "Text must be a non-empty string."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 17,
+        "payload": [],
+        "status_code": 400,
+        "response": {
+          "error": "invalid_request",
+          "message": "A JSON object is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 18,
+        "payload": null,
+        "status_code": 400,
+        "response": {
+          "error": "invalid_request",
+          "message": "A JSON object is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 19,
+        "payload": "not a JSON object",
+        "status_code": 400,
+        "response": {
+          "error": "invalid_request",
+          "message": "A JSON object is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      },
+      {
+        "sample": 20,
+        "payload": 123,
+        "status_code": 400,
+        "response": {
+          "error": "invalid_request",
+          "message": "A JSON object is required."
+        },
+        "no_submission_created": true,
+        "passed": true
+      }
+    ]
+  }
+]

@@ -108,7 +108,8 @@ def main():
 
     rows = []
     for scenario in scenarios.SCENARIOS:
-        print(f"\n{scenario['name']}  (criterion {scenario.get('criterion') or '—'})")
+        print(
+            f"\n{scenario['name']}  (criterion {scenario.get('criterion') or '—'})")
 
         trials = []
         for trial in range(1, args.trials + 1):
@@ -123,10 +124,12 @@ def main():
                         "status": response.status_code,
                         "guess": payload.get("guess"),
                         "confidence": payload.get("confidence"),
+                        "combined_score": payload.get("combined_score"),
                         "model_score": payload.get("model_score"),
                         "style_score": payload.get("style_score"),
                         "label": payload.get("label"),
                         "sent": preview,
+
                     })
                 except Exception as exc:  # noqa: BLE001
                     results.append({"status": None, "error": f"{type(exc).__name__}: {exc}",
