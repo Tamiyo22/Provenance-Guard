@@ -1,0 +1,112 @@
+[
+  {
+    "combined_score": 0.28582,
+    "content_id": "4c55f5ab-9cc7-48c3-9451-1cb8b2d440d5",
+    "creator_id": "attacker_EV01",
+    "guess": "human",
+    "label": "This writing shows patterns commonly associated with human-written text, but the result is not definitive.",
+    "model_score": 0.1635,
+    "status": "decided",
+    "style_score": 0.4693,
+    "timestamp": "2026-11-14T22:55:44+00:00"
+  },
+  {
+    "combined_score": 0.29175999999999996,
+    "content_id": "26510189-990f-4a8c-bce1-d91b6d3962b9",
+    "creator_id": "attacker_EV05",
+    "guess": "human",
+    "label": "This writing shows patterns commonly associated with human-written text, but the result is not definitive.",
+    "model_score": 0.3212,
+    "status": "decided",
+    "style_score": 0.2476,
+    "timestamp": "2026-11-14T22:55:45+00:00"
+  },
+  {
+    "combined_score": 0.86036,
+    "content_id": "7bb63ce8-a111-481f-a942-4af5b0c4f272",
+    "creator_id": "attacker_EV10",
+    "guess": "ai",
+    "label": "This writing shows patterns commonly associated with AI-generated text, but the result is not definitive.",
+    "model_score": 0.9792,
+    "status": "decided",
+    "style_score": 0.6821,
+    "timestamp": "2026-11-14T22:55:46+00:00"
+  },
+  {
+    "combined_score": 0.54954,
+    "content_id": "463171ad-a74d-4338-80de-7bbcf49940ea",
+    "creator_id": "attacker_FP01",
+    "guess": "unsure",
+    "label": "We cannot reliably determine how this text was created.",
+    "model_score": 0.6175,
+    "status": "decided",
+    "style_score": 0.4476,
+    "timestamp": "2026-11-14T22:55:47+00:00"
+  },
+  {
+    "combined_score": 0.39337999999999995,
+    "content_id": "518ed04e-c86d-41bd-be19-cc2a31d46886",
+    "creator_id": "attacker_FP08",
+    "guess": "unsure",
+    "label": "We cannot reliably determine how this text was created.",
+    "model_score": 0.3223,
+    "status": "decided",
+    "style_score": 0.5,
+    "timestamp": "2026-11-14T22:55:48+00:00"
+  },
+  {
+    "combined_score": 0.38526000000000005,
+    "content_id": "14e47032-8526-4703-a93a-d0f0282542d3",
+    "creator_id": "attacker_PI01",
+    "guess": "unsure",
+    "label": "We cannot reliably determine how this text was created.",
+    "model_score": 0.4625,
+    "status": "decided",
+    "style_score": 0.2694,
+    "timestamp": "2026-11-14T22:55:48+00:00"
+  },
+  {
+    "combined_score": 0.19568000000000002,
+    "content_id": "8f78e40a-bf8f-426d-8b2b-fb77841ec167",
+    "creator_id": "attacker_PI02",
+    "guess": "human",
+    "label": "This writing shows patterns commonly associated with human-written text, but the result is not definitive.",
+    "model_score": 0.2044,
+    "status": "decided",
+    "style_score": 0.1826,
+    "timestamp": "2026-11-14T22:55:48+00:00"
+  },
+  {
+    "combined_score": 0.2,
+    "content_id": "38ef69b6-7c79-465e-8035-040f9096eb2d",
+    "creator_id": "attacker_MF03",
+    "guess": "human",
+    "label": "This writing shows patterns commonly associated with human-written text, but the result is not definitive.",
+    "model_score": 0.0,
+    "status": "decided",
+    "style_score": 0.5,
+    "timestamp": "2026-11-14T22:55:49+00:00"
+  },
+  {
+    "combined_score": 0.7985599999999999,
+    "content_id": "2674b64c-9fce-4a34-8a13-91c5f99317e8",
+    "creator_id": "attacker_MF05",
+    "guess": "ai",
+    "label": "This writing shows patterns commonly associated with AI-generated text, but the result is not definitive.",
+    "model_score": 0.9976,
+    "status": "decided",
+    "style_score": 0.5,
+    "timestamp": "2026-11-14T22:55:50+00:00"
+  },
+  {
+    "combined_score": 0.21722000000000002,
+    "content_id": "a5582a45-3ae1-4629-9e88-a51a28b2cd2c",
+    "creator_id": "attacker_flood",
+    "guess": "human",
+    "label": "This writing shows patterns commonly associated with human-written text, but the result is not definitive.",
+    "model_score": 0.0287,
+    "status": "decided",
+    "style_score": 0.5,
+    "timestamp": "2026-11-14T22:55:53+00:00"
+  }
+]
