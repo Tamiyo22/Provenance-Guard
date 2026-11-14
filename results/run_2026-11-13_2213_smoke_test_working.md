@@ -1,0 +1,638 @@
+# Run log — smoke_test_working
+
+- Produced by: `run_eval.py::main`
+- Service: `app.py::submit` · scoring: `scoring.py::combine_signals`
+- 1 trials per criterion · 2026-11-13 22:13
+
+Fill in Target from `criteria.md`, and Run and Verdict from the output
+underneath. Whether a trial passed depends on the criterion you wrote.
+
+| Criterion | Target | Run 1 | Verdict |
+|---|---|---|---|
+| 1. my own writing |  |   |  |
+| 2. AI versus human score separation |  |   |  |
+
+---
+
+## What actually came back
+
+Real output. Paste the relevant parts into your README — the rubric
+asks for the actual JSON, not a description of it.
+
+### my own writing
+
+**Trial 1**
+
+```json
+[
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.53738,
+    "model_score": 0.6063,
+    "style_score": 0.434,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "I saw Jaren Lewison, from Never Have I Ever, and loved the show idea, "
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.48546,
+    "model_score": 0.5315,
+    "style_score": 0.4164,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Irish week, day one: soda bread and root vegetable cobble (cheddar bis"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.5375,
+    "model_score": 0.5625,
+    "style_score": 0.5,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Happy Birthday Husband, you are the light in every room, every day and"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.57666,
+    "model_score": 0.6853,
+    "style_score": 0.4137,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Last Wednesday Matt and I brought Sammy into the vet for a checkup, an"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.5312600000000001,
+    "model_score": 0.6185,
+    "style_score": 0.4004,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Biscuit was also a very patient and caring with both Sammy and Ninja. "
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.39716,
+    "model_score": 0.3286,
+    "style_score": 0.5,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "The clouds broke right above our home! Slightly ominous, 100% awesome."
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.5414599999999999,
+    "model_score": 0.6335,
+    "style_score": 0.4034,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "o...we have a cat again! Her name is Ninja. \ud83e\udd77 She started showing up i"
+  },
+  {
+    "status": 200,
+    "guess": "human",
+    "confidence": 0.6883,
+    "combined_score": 0.31168,
+    "model_score": 0.3736,
+    "style_score": 0.2188,
+    "label": "This writing shows patterns commonly associated with human-written text, but the result is not definitive.",
+    "sent": "Last weekend, we treated Matt to an unforgettable birthday celebration"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.50108,
+    "model_score": 0.487,
+    "style_score": 0.5222,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Surprising Matt on his birthday was a lot of fun. I planned a special "
+  },
+  {
+    "status": 200,
+    "guess": "ai",
+    "confidence": 0.652,
+    "combined_score": 0.6519799999999999,
+    "model_score": 0.8341,
+    "style_score": 0.3788,
+    "label": "This writing shows patterns commonly associated with AI-generated text, but the result is not definitive.",
+    "sent": "Happy Birthday to my incredible husband! \ud83c\udf89\nFour amazing years of marri"
+  },
+  {
+    "status": 200,
+    "guess": "human",
+    "confidence": 0.7704,
+    "combined_score": 0.22956,
+    "model_score": 0.2414,
+    "style_score": 0.2118,
+    "label": "This writing shows patterns commonly associated with human-written text, but the result is not definitive.",
+    "sent": "Finally achieved kolaches that had the soft/fluffy texture I have been"
+  },
+  {
+    "status": 200,
+    "guess": "human",
+    "confidence": 0.7023,
+    "combined_score": 0.29768,
+    "model_score": 0.1628,
+    "style_score": 0.5,
+    "label": "This writing shows patterns commonly associated with human-written text, but the result is not definitive.",
+    "sent": "Trying to level up my kolache game. Enriched dough is hard to work wit"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.4828,
+    "model_score": 0.481,
+    "style_score": 0.4855,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Tried making a peach coffee cake and it's probably my favorite thing I"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.55912,
+    "model_score": 0.6876,
+    "style_score": 0.3664,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Biscuit was our most underrated dog. All she ever wanted was to be lov"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.5456599999999999,
+    "model_score": 0.6637,
+    "style_score": 0.3686,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "She immediately wanted to go for a walk, so we took everyone out. Befo"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.48594,
+    "model_score": 0.5677,
+    "style_score": 0.3633,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Biscuit had quite the year. We started it with TPLO surgery and a lary"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.56136,
+    "model_score": 0.6702,
+    "style_score": 0.3981,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "In the days that followed, things were looking up for Biscuit, and she"
+  },
+  {
+    "status": 200,
+    "guess": "ai",
+    "confidence": 0.6799,
+    "combined_score": 0.67994,
+    "model_score": 0.8039,
+    "style_score": 0.494,
+    "label": "This writing shows patterns commonly associated with AI-generated text, but the result is not definitive.",
+    "sent": "Sammy was loved by so many, and this all happened so fast. Many, many "
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.49348000000000003,
+    "model_score": 0.5996,
+    "style_score": 0.3343,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "I used to try to downplay my love for Sammy, and his love for me, beca"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.45248000000000005,
+    "model_score": 0.4686,
+    "style_score": 0.4283,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Next month Sammy would have turned 18 years old. I got him in 2005 (ma"
+  }
+]
+```
+
+### AI versus human score separation
+
+**Trial 1**
+
+```json
+[
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.53738,
+    "model_score": 0.6063,
+    "style_score": 0.434,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "I saw Jaren Lewison, from Never Have I Ever, and loved the show idea, "
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.48546,
+    "model_score": 0.5315,
+    "style_score": 0.4164,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Irish week, day one: soda bread and root vegetable cobble (cheddar bis"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.5375,
+    "model_score": 0.5625,
+    "style_score": 0.5,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Happy Birthday Husband, you are the light in every room, every day and"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.57666,
+    "model_score": 0.6853,
+    "style_score": 0.4137,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Last Wednesday Matt and I brought Sammy into the vet for a checkup, an"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.5312600000000001,
+    "model_score": 0.6185,
+    "style_score": 0.4004,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Biscuit was also a very patient and caring with both Sammy and Ninja. "
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.39716,
+    "model_score": 0.3286,
+    "style_score": 0.5,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "The clouds broke right above our home! Slightly ominous, 100% awesome."
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.5414599999999999,
+    "model_score": 0.6335,
+    "style_score": 0.4034,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "o...we have a cat again! Her name is Ninja. \ud83e\udd77 She started showing up i"
+  },
+  {
+    "status": 200,
+    "guess": "human",
+    "confidence": 0.6883,
+    "combined_score": 0.31168,
+    "model_score": 0.3736,
+    "style_score": 0.2188,
+    "label": "This writing shows patterns commonly associated with human-written text, but the result is not definitive.",
+    "sent": "Last weekend, we treated Matt to an unforgettable birthday celebration"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.50108,
+    "model_score": 0.487,
+    "style_score": 0.5222,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Surprising Matt on his birthday was a lot of fun. I planned a special "
+  },
+  {
+    "status": 200,
+    "guess": "ai",
+    "confidence": 0.652,
+    "combined_score": 0.6519799999999999,
+    "model_score": 0.8341,
+    "style_score": 0.3788,
+    "label": "This writing shows patterns commonly associated with AI-generated text, but the result is not definitive.",
+    "sent": "Happy Birthday to my incredible husband! \ud83c\udf89\nFour amazing years of marri"
+  },
+  {
+    "status": 200,
+    "guess": "human",
+    "confidence": 0.7704,
+    "combined_score": 0.22956,
+    "model_score": 0.2414,
+    "style_score": 0.2118,
+    "label": "This writing shows patterns commonly associated with human-written text, but the result is not definitive.",
+    "sent": "Finally achieved kolaches that had the soft/fluffy texture I have been"
+  },
+  {
+    "status": 200,
+    "guess": "human",
+    "confidence": 0.7023,
+    "combined_score": 0.29768,
+    "model_score": 0.1628,
+    "style_score": 0.5,
+    "label": "This writing shows patterns commonly associated with human-written text, but the result is not definitive.",
+    "sent": "Trying to level up my kolache game. Enriched dough is hard to work wit"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.4828,
+    "model_score": 0.481,
+    "style_score": 0.4855,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Tried making a peach coffee cake and it's probably my favorite thing I"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.55912,
+    "model_score": 0.6876,
+    "style_score": 0.3664,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Biscuit was our most underrated dog. All she ever wanted was to be lov"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.5456599999999999,
+    "model_score": 0.6637,
+    "style_score": 0.3686,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "She immediately wanted to go for a walk, so we took everyone out. Befo"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.48594,
+    "model_score": 0.5677,
+    "style_score": 0.3633,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Biscuit had quite the year. We started it with TPLO surgery and a lary"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.56136,
+    "model_score": 0.6702,
+    "style_score": 0.3981,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "In the days that followed, things were looking up for Biscuit, and she"
+  },
+  {
+    "status": 200,
+    "guess": "ai",
+    "confidence": 0.6799,
+    "combined_score": 0.67994,
+    "model_score": 0.8039,
+    "style_score": 0.494,
+    "label": "This writing shows patterns commonly associated with AI-generated text, but the result is not definitive.",
+    "sent": "Sammy was loved by so many, and this all happened so fast. Many, many "
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.49348000000000003,
+    "model_score": 0.5996,
+    "style_score": 0.3343,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "I used to try to downplay my love for Sammy, and his love for me, beca"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.45248000000000005,
+    "model_score": 0.4686,
+    "style_score": 0.4283,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Next month Sammy would have turned 18 years old. I got him in 2005 (ma"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.5836999999999999,
+    "model_score": 0.6063,
+    "style_score": 0.5498,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "The strongest part of this television series is its attention to chara"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.40798,
+    "model_score": 0.3955,
+    "style_score": 0.4267,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Irish comfort food offers a wonderful example of how simple ingredient"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.5651,
+    "model_score": 0.6085,
+    "style_score": 0.5,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Wishing you a wonderful birthday filled with laughter, kindness, and t"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.54476,
+    "model_score": 0.5656,
+    "style_score": 0.5135,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Halloween can bring an entire neighborhood together in a surprisingly "
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.6261599999999999,
+    "model_score": 0.6868,
+    "style_score": 0.5352,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Adopting a rescued cat often involves a period of uncertainty, especia"
+  },
+  {
+    "status": 200,
+    "guess": "human",
+    "confidence": 0.6889,
+    "combined_score": 0.31112,
+    "model_score": 0.1852,
+    "style_score": 0.5,
+    "label": "This writing shows patterns commonly associated with human-written text, but the result is not definitive.",
+    "sent": "A dramatic opening in the clouds can turn a familiar sky into somethin"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.5610200000000001,
+    "model_score": 0.5983,
+    "style_score": 0.5051,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "A day trip to a nearby Texas town can offer a refreshing change of pac"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.40434000000000003,
+    "model_score": 0.3623,
+    "style_score": 0.4674,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Planning a birthday surprise does not require an extravagant budget. A"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.41928,
+    "model_score": 0.3462,
+    "style_score": 0.5289,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "A lasting partnership is built through ordinary acts of care as much a"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.54926,
+    "model_score": 0.5901,
+    "style_score": 0.488,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Baking soft kolaches is an enjoyable project that combines technique w"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.38032,
+    "model_score": 0.358,
+    "style_score": 0.4138,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Enriched dough can be tricky because fat and sugar change the way glut"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.41786,
+    "model_score": 0.3631,
+    "style_score": 0.5,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Enriched dough requires patience, especially during kneading and proof"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.40852,
+    "model_score": 0.4684,
+    "style_score": 0.3187,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "A peach coffee cake combines soft fruit, a tender crumb, and a gently "
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.5064799999999999,
+    "model_score": 0.4836,
+    "style_score": 0.5408,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Community keepsakes can represent shared effort and a sense of belongi"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.54226,
+    "model_score": 0.5921,
+    "style_score": 0.4675,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "A picky dog can make mealtimes stressful, particularly when the animal"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.58404,
+    "model_score": 0.6238,
+    "style_score": 0.5244,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Remembering a beloved dog often means remembering hundreds of small mo"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.46516,
+    "model_score": 0.5624,
+    "style_score": 0.3193,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Shared hobbies can create unexpectedly meaningful connections. A local"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.53682,
+    "model_score": 0.6013,
+    "style_score": 0.4401,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Caring for an elderly cat can be both a privilege and an emotional cha"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.5210400000000001,
+    "model_score": 0.4964,
+    "style_score": 0.558,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Bringing a rescued dog home is an exciting transition for both the ani"
+  },
+  {
+    "status": 200,
+    "guess": "unsure",
+    "confidence": 0.5,
+    "combined_score": 0.56824,
+    "model_score": 0.585,
+    "style_score": 0.5431,
+    "label": "We cannot reliably determine how this text was created.",
+    "sent": "Supporting a senior cat with kidney concerns requires a balance of vet"
+  }
+]
+```
